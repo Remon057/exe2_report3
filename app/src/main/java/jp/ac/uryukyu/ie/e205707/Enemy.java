@@ -8,34 +8,21 @@ package jp.ac.uryukyu.ie.e205707;
  *  boolean dead; //敵の生死状態。true=死亡。
  * Created by tnal on 2016/11/13.
  */
+
 public class Enemy extends LivingThing {
-    public Enemy(String name, int hitPoint, int attack){
-        super(name, hitPoint, attack);
+    /**
+     * コンストラクタ。名前、最大HP、攻撃力を指定する。
+    * @param name モンスター名
+    * @param maximumHP モンスターのHP
+    * @param attack モンスターの攻撃力
+    */
+    public Enemy(String name, int maximumHP, int attack){
+        super(name, maximumHP, attack);
     }
     
-    /**
-     * 敵の名前のアクセサ
-     * @return　String name
-     */
     
-    /**
-     * 敵の体力のアクセサ
-     * @return　int hitPoint
-     */
-    public int getHitPoint(){
-        return this.hitPoint;
-    }
-    /**
-     * 敵の攻撃力のアクセサ
-     * @return　int attack
-     */
-    public int getAttack(){
-        return this.attack;
-    }
-    /**
-     * 敵の生死のアクセサ
-     * @return　boolean　dead
-     */
+    
+    
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
      * @param name モンスター名

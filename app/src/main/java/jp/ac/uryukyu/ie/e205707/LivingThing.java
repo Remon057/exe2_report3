@@ -1,11 +1,23 @@
 package jp.ac.uryukyu.ie.e205707;
-
+/**
+ * LivingThingクラス。
+ * String name; //名前
+ * int hitPoint; //HP
+ * int attack; //攻撃力
+ * boolean dead; //生死状態。true=死亡。
+ */
 public class LivingThing {
     String name;
     int hitPoint;
     int attack;
     boolean dead;
 
+    /**
+     * コンストラクタ。名前、最大HP、攻撃力を指定する。
+     * @param name 名前
+     * @param hitPoint HP
+     * @param attack 攻撃力
+     */
     public LivingThing(String name, int hitPoint, int attack){
         this.name = name;
         this.hitPoint = hitPoint;
@@ -22,6 +34,15 @@ public class LivingThing {
         return this.name;
     }
 
+    public int getHitPoint(){
+        return this.hitPoint;
+    }
+
+    /**
+     * 攻撃するメソッド。
+     * attackに応じて乱数でダメージを算出し、opponent.wounded()によりダメージ処理を実行。
+     * @param opponent 攻撃対象
+     */
     public void attack(LivingThing opponent){
         if(dead == false){
             int damage = (int)(Math.random() * attack);
